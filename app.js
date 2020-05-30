@@ -37,31 +37,42 @@ const createLinks = (videoEmbedArray) => {
 // get flag emoji
 const getFlag = (flag) => {
   if (flag === "england") {
-    icon = "🏴󠁧󠁢󠁥󠁮󠁧󠁿";
+    let icon = "🏴󠁧󠁢󠁥󠁮󠁧󠁿";
+    return icon;
   } else if (flag === "germany") {
-    icon = "🇩🇪";
+    let icon = "🇩🇪";
+    return icon;
   } else if (flag === "spain") {
-    icon = "🇪🇸";
+    let icon = "🇪🇸";
+    return icon;
   } else if (flag === "france") {
-    icon = "🇫🇷";
+    let icon = "🇫🇷";
+    return icon;
   } else if (flag === "italy") {
-    icon = "🇮🇹";
+    let icon = "🇮🇹";
+    return icon;
   } else if (flag === "hungary") {
-    icon = "🇭🇺";
+    let icon = "🇭🇺";
+    return icon;
   } else if (flag === "poland") {
-    icon = "🇵🇱";
+    let icon = "🇵🇱";
+    return icon;
   } else if (flag === "serbia") {
-    icon = "🇷🇸";
+    let icon = "🇷🇸";
+    return icon;
   } else if (flag === "belarus") {
-    icon = "🇧🇾";
+    let icon = "🇧🇾";
+    return icon;
   } else if (flag === "korea republic") {
-    icon = "🇰🇷";
+    let icon = "🇰🇷";
+    return icon;
   } else if (flag === "international") {
-    icon = "🌎";
+    let icon = "🌎";
+    return icon;
   } else if (flag === "champions league" || flag === "europa league") {
-    icon = "🇪🇺";
+    let icon = "🇪🇺";
+    return icon;
   }
-  return icon;
 };
 
 // render the highlights
@@ -107,7 +118,7 @@ const renderHighlights = (highlights, videoEmbedArray) => {
                   </div>                    
                   <div class="info">
                       
-                      <p>${icon} ${competitionName}</p>
+                      <p>${flag} ${competitionName}</p>
                     <p>${cleanDate}</p>
                   </div>
                 </div>
