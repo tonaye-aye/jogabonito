@@ -1,3 +1,5 @@
+/* base style */
+/* ------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,700&display=swap");
 
 :root {
@@ -43,6 +45,9 @@ main {
   height: calc(var(--vh, 1vh) * 100);
 }
 
+/* header/nav style */
+/* ------------------------ */
+
 header {
   background: indianred;
   color: var(--ghostwhite);
@@ -75,6 +80,8 @@ header {
   padding: 1rem;
 }
 
+/* introduction copy style */
+/* ------------------------ */
 section {
   max-width: 1068px;
   display: flex;
@@ -111,6 +118,8 @@ section {
   font-weight: 700;
 }
 
+/* search input style */
+/* ------------------------ */
 .search {
   position: relative;
   margin: 3rem 0;
@@ -180,6 +189,8 @@ input:focus::placeholder {
   color: var(--grey);
 }
 
+/* video player style */
+/* ------------------------ */
 .video-modal {
   position: fixed;
   top: 0;
@@ -211,6 +222,8 @@ input:focus::placeholder {
   display: none;
 }
 
+/* highlights reel style */
+/* ------------------------ */
 .highlights-reel {
   width: 100%;
   display: inline-grid;
@@ -226,7 +239,6 @@ input:focus::placeholder {
   max-width: 240px;
   text-align: center;
   cursor: pointer;
-  /* gap */
   text-decoration: none;
   color: var(--black);
   border-radius: 0.3rem;
@@ -264,11 +276,6 @@ input:focus::placeholder {
 img {
   width: 100%;
   height: auto;
-  /* margin-top: -45px; */
-}
-
-.highlight-content {
-  /* margin: 1rem; */
 }
 
 .teams {
@@ -293,14 +300,6 @@ img {
   color: orangered;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ececec, #dadada, #ececec);
-  margin: 0.3rem 0;
-}
-
 .info {
   background: var(--grey);
   padding: 1rem;
@@ -318,6 +317,8 @@ hr {
   color: silver;
 }
 
+/* footer style */
+/* ------------------------ */
 footer {
   width: 100%;
   background: var(--grey);
@@ -332,6 +333,8 @@ footer a {
   font-weight: 700;
 }
 
+/* media queries */
+/* ------------------------ */
 @media screen and (max-width: 1068px) {
   .highlights-reel {
     grid-template-columns: 1fr 1fr 1fr;
