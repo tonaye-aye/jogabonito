@@ -166,12 +166,6 @@ const app = (highlights) => {
       searchIcon.classList.toggle("hide");
     })
   );
-
-  // resize height for mobile
-  window.addEventListener("resize", () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  });
 };
 
 // get api
