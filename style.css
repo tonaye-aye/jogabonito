@@ -362,6 +362,9 @@ footer a {
   .video-player {
     width: 100%;
   }
+  .search {
+    margin: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 540px) {
