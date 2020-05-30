@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,700&display=swap");
+
+:root {
+  --box-shadow-transition: 0 1px 3px 0 rgba(142, 54, 54, 0.2),
+    0 3px 5px 1px rgba(74, 17, 17, 0.1);
+  --box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  --black: #1a1a1a;
+  --white: $ffffff;
+  --ghostwhite: #f8f8ff;
+  --grey: rgba(211, 211, 211, 0.3);
+  --lightgrey: #fafafa;
+  --red: #de8c8c;
+  --lightred: rgba(205, 92, 92, 0.5);
+  --palered: rgba(225, 129, 129, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--lightgrey);
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  width: 100%;
+  height: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+header {
+  background: indianred;
+  color: var(--ghostwhite);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.brand {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.brand span {
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+.help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+section {
+  max-width: 1068px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduction {
+  padding: 0 2rem;
+}
+
+.introduction h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+.introduction h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  margin: 1rem 0 1.5rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid var(--grey);
+}
+
+.light {
+  opacity: 0.3;
+}
+
+.red {
+  color: indianred;
+  font-weight: 700;
+}
+
+.search {
+  position: relative;
+  margin: 3rem 0;
+}
+
+.search-icon {
+  position: absolute;
+  color: var(--lightred);
+  right: 2rem;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.hide {
+  display: none;
+}
+
+.search-null {
+  width: 100%;
+}
+
+.search-message {
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.error-message {
+  width: 100%;
+  padding: 2rem;
+  color: var(--black);
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+input {
+  padding: 1.4rem 2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: indianred;
+  border: 0;
+  border-radius: 2rem;
+  outline: 0;
+  border: 1px solid var(--lightgrey);
+  background: var(--lightgrey);
+  box-shadow: var(--box-shadow);
+  font-size: 1.3rem;
+  transition: border 800ms ease-in-out;
+  transition: background 500ms ease-in-out;
+}
+input::placeholder {
+  font-weight: 200;
+  color: var(--lightred);
+  transition: all 800ms ease-in-out;
+}
+input:focus {
+  box-shadow: var(--box-shadow-transition);
+  border: 1px solid var(--palered);
+  caret-color: var(--lightred);
+  transition: background 500ms ease-in-out;
+  transition: border 800ms ease-in-out;
+}
+input:focus::placeholder {
+  font-weight: 200;
+  color: var(--grey);
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.video-player {
+  width: 60%;
+  height: auto;
+  z-index: 2;
+}
+
+.close-icon {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.highlights-reel {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.card {
+  display: inline;
+  max-width: 240px;
+  text-align: center;
+  cursor: pointer;
+  /* gap */
+  text-decoration: none;
+  color: var(--black);
+  border-radius: 0.3rem;
+  background: var(--ghostwhite);
+  box-shadow: var(--box-shadow);
+  transition: all 500ms ease-in-out;
+}
+
+.card:hover {
+  filter: opacity(65%);
+  box-shadow: var(--box-shadow-transition);
+  transform: translateY(-0.6px) scale(1.05);
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 130px;
+  border-radius: 0.3rem 0.3rem 0 0;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-size: cover;
+  background-position: center;
+}
+
+.play-icon {
+  position: absolute;
+  color: var(--ghostwhite);
+  transition: opacity 1s ease-in-out;
+  opacity: 0.6;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  /* margin-top: -45px; */
+}
+
+.highlight-content {
+  /* margin: 1rem; */
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  grid-gap: 0.25rem;
+  align-items: center;
+  padding: 1rem;
+  text-align: left;
+}
+
+.team-icon {
+  text-align: right;
+  height: 20px;
+}
+
+.team-icon:nth-child(2) {
+  color: yellowgreen;
+}
+.team-icon:last-child {
+  color: orangered;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ececec, #dadada, #ececec);
+  margin: 0.3rem 0;
+}
+
+.info {
+  background: var(--grey);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.info > p:first-child {
+  color: indianred;
+}
+.info > p:last-child {
+  color: silver;
+}
+
+footer {
+  width: 100%;
+  background: var(--grey);
+  text-align: center;
+  margin: 2rem 0 0 0;
+  padding: 3rem 0 4rem;
+}
+
+footer a {
+  color: indianred;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1068px) {
+  .highlights-reel {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .video-player {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 828px) {
+  .highlights-reel {
+    grid-template-columns: 1fr 1fr;
+  }
+  .introduction h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0 0.5rem 0;
+  }
+  .introduction h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1rem 0;
+  }
+  .video-player {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .highlights-reel {
+    grid-template-columns: 1fr;
+  }
+  .introduction h1 {
+    font-size: 2rem;
+  }
+  .introduction h2 {
+    font-size: 1rem;
+  }
+}

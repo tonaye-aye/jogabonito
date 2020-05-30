@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joga Bonito</title>
+
+    <script
+      src="https://kit.fontawesome.com/0d4b9ea279.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./app.js" defer></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="player" class="video-modal hide">
+        <div class="video-player"></div>
+        <div class="close-icon"><i class="fas fa-times fa-3x"></i></div>
+      </div>
+      <header>
+        <div class="brand">
+          joga bonito <span class="light">the beautiful game</span>
+        </div>
+        <div class="help">
+          <i class="fas fa-futbol fa-3x"></i>
+        </div>
+      </header>
+      <section>
+        <div class="introduction">
+          <h1>Quick fire football highlights</h1>
+          <h2>
+            The latest games from across the world, don't miss any action.
+            Filter by league, country or team
+            <span class="light">&#8212;</span>
+            <span class="red">Joga bonito</span>.
+          </h2>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="Search. . ." />
+          <div class="search-icon"><i class="fas fa-search"></i></div>
+        </div>
+        <div class="search-null"></div>
+        <div class="highlights-reel"></div>
+      </section>
+      <footer>
+        <p>Made by tones. Find out more about me, <a href="#">here</a>.</p>
+      </footer>
+    </main>
+  </body>
+</html>
