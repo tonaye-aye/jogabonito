@@ -66,11 +66,11 @@ const getFlag = (flag) => {
   } else if (flag === "korea republic") {
     let icon = "🇰🇷";
     return icon;
-  } else if (flag === "international") {
-    let icon = "🌎";
-    return icon;
   } else if (flag === "champions league" || flag === "europa league") {
     let icon = "🇪🇺";
+    return icon;
+  } else {
+    let icon = "🌎";
     return icon;
   }
 };
@@ -97,7 +97,7 @@ const renderHighlights = (highlights, videoEmbedArray) => {
     // country flag
     let flag = highlights[index].competition.name;
     flag = flag.split(":").shift().toLowerCase();
-    getFlag(flag);
+    let flagIcon = getFlag(flag);
 
     // embedded video
     let videoEmbed = highlights[index].videos[0].embed;
@@ -118,7 +118,7 @@ const renderHighlights = (highlights, videoEmbedArray) => {
                   </div>                    
                   <div class="info">
                       
-                      <p>${flag} ${competitionName}</p>
+                      <p>${flagIcon} ${competitionName}</p>
                     <p>${cleanDate}</p>
                   </div>
                 </div>
