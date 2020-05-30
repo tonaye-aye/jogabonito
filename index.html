@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joga Bonito</title>
-
+    <title>Joga Bonito by tones.</title>
+    <!--favicons-->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -23,23 +23,36 @@
       href="./assets/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/site.webmanifest" />
-
+    <!--font awesome-->
     <script
       src="https://kit.fontawesome.com/0d4b9ea279.js"
       crossorigin="anonymous"
     ></script>
+    <!--axios-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--scroll reveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!--animate-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <!--styles-->
+    <style>
+      @import url("./style.css");
+    </style>
+    <!--app-->
     <script src="./app.js" defer></script>
-
-    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!--app-->
     <main>
+      <!--video player-->
       <div id="player" class="video-modal hide">
         <div class="video-player"></div>
         <div class="close-icon"><i class="fas fa-times fa-3x"></i></div>
       </div>
+      <!--header/navbar-->
       <header>
         <div class="brand">
           joga bonito <span class="light">the beautiful game</span>
@@ -48,8 +61,10 @@
           <i class="fas fa-futbol fa-3x"></i>
         </div>
       </header>
+      <!--main content-->
       <section>
-        <div class="introduction">
+        <!--introduction-->
+        <div class="introduction animate__animated animate__slideInDown">
           <h1>Quick fire football highlights</h1>
           <h2>
             The latest games from across the world, don't miss any action.
@@ -58,13 +73,17 @@
             <span class="red">Joga bonito</span>.
           </h2>
         </div>
+        <!--search input-->
         <div class="search">
           <input type="text" placeholder="Search. . ." />
           <div class="search-icon"><i class="fas fa-search"></i></div>
         </div>
+        <!--no search found-->
         <div class="search-null"></div>
+        <!--football highlights-->
         <div class="highlights-reel"></div>
       </section>
+      <!--footer-->
       <footer>
         <p>Made by tones. Find out more about me, <a href="#">here</a>.</p>
       </footer>

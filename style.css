@@ -12,7 +12,7 @@
   --grey: rgba(211, 211, 211, 0.3);
   --lightgrey: #fafafa;
   --red: #de8c8c;
-  --lightred: rgba(205, 92, 92, 0.5);
+  --lightred: rgba(205, 92, 92, 0.4);
   --palered: rgba(225, 129, 129, 0.2);
 }
 
@@ -93,6 +93,7 @@ section {
 
 .introduction {
   padding: 0 2rem;
+  z-index: -1;
 }
 
 .introduction h1 {
@@ -167,7 +168,7 @@ input {
   border: 0;
   border-radius: 2rem;
   outline: 0;
-  border: 1px solid var(--lightgrey);
+  border: 1px solid var(--lightred);
   background: var(--lightgrey);
   box-shadow: var(--box-shadow);
   font-size: 1.3rem;
@@ -250,7 +251,7 @@ input:focus::placeholder {
 }
 
 .card:hover {
-  filter: opacity(65%);
+  filter: contrast(75%);
   box-shadow: var(--box-shadow-transition);
   transform: translateY(-0.6px) scale(1.05);
 }
