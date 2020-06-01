@@ -166,7 +166,7 @@ input {
   font-weight: 400;
   color: indianred;
   outline: 0;
-  border: 2px solid var(--lightred);
+  border: 1px solid indianred;
   background: var(--lightgrey);
   font-size: 1.3rem;
   transition: all 400ms ease-in-out;
@@ -177,7 +177,7 @@ input::placeholder {
   transition: all 600ms ease-in-out;
 }
 input:focus {
-  border: 2px solid var(--red);
+  border: 1px solid var(--red);
   caret-color: var(--lightred);
 }
 input:focus::placeholder {
