@@ -161,31 +161,24 @@ section {
 }
 
 input {
-  padding: 1.4rem 2rem;
+  padding: 1.2rem 1.8rem;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   color: indianred;
-  border: 0;
-  border-radius: 2rem;
   outline: 0;
-  border: 1px solid var(--lightred);
+  border: 2px solid var(--lightred);
   background: var(--lightgrey);
-  box-shadow: var(--box-shadow);
   font-size: 1.3rem;
-  transition: border 800ms ease-in-out;
-  transition: background 500ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 input::placeholder {
   font-weight: 200;
   color: var(--lightred);
-  transition: all 800ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 input:focus {
-  box-shadow: var(--box-shadow-transition);
-  border: 1px solid var(--palered);
+  border: 2px solid var(--red);
   caret-color: var(--lightred);
-  transition: background 500ms ease-in-out;
-  transition: border 800ms ease-in-out;
 }
 input:focus::placeholder {
   font-weight: 200;
@@ -348,15 +341,27 @@ footer a {
 }
 
 @media screen and (max-width: 828px) {
+  header {
+    padding: 1rem;
+  }
+  .brand {
+    font-size: 1.2rem;
+  }
+  .brand span {
+    font-size: 1rem;
+  }
+  .help {
+    padding: 0;
+  }
   .highlights-reel {
     grid-template-columns: 1fr 1fr;
   }
   .introduction h1 {
-    font-size: 2.5rem;
-    margin: 2rem 0 0.5rem 0;
+    font-size: 2.2rem;
+    margin: 1.2rem 0 0.5rem 0;
   }
   .introduction h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0.5rem 0 1rem 0;
   }
   .video-player {
@@ -364,6 +369,10 @@ footer a {
   }
   .search {
     margin: 1rem 0;
+  }
+  input {
+    padding: 0.8rem 1.4rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -376,5 +385,8 @@ footer a {
   }
   .introduction h2 {
     font-size: 1rem;
+  }
+  .search {
+    margin: 0.6rem 0;
   }
 }
