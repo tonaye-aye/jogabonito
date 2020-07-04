@@ -1,6 +1,6 @@
 /* base style */
 /* ------------------------ */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,700&display=swap');
 
 :root {
   --box-shadow-transition: 0 1px 3px 0 rgba(142, 54, 54, 0.2),
@@ -30,7 +30,7 @@
 body {
   background: var(--lightgrey);
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   color: var(--black);
   width: 100%;
@@ -162,27 +162,26 @@ section {
 
 input {
   padding: 1.2rem 1.8rem;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   color: indianred;
   outline: 0;
-  border: 1px solid indianred;
-  background: var(--lightgrey);
+  border-radius: 2rem;
+  border: none;
+  background: #f0f0f0;
   font-size: 1.3rem;
   transition: all 400ms ease-in-out;
 }
 input::placeholder {
   font-weight: 200;
-  color: var(--lightred);
+  color: indianred;
   transition: all 600ms ease-in-out;
 }
 input:focus {
-  border: 1px solid var(--red);
   caret-color: var(--lightred);
 }
 input:focus::placeholder {
-  font-weight: 200;
-  color: var(--grey);
+  opacity: 0.8;
 }
 
 /* video player style */
